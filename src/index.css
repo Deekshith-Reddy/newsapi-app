@@ -1,10 +1,77 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header {
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 0 5%;
+background-color: skyblue;
+padding: 0 3%;
+border-radius: 50px;
+}
+
+.search {
+  display: flex;
+  padding: 1%;
+  height: 30px;
+}
+
+.search button {
+  margin: 0 3%;
+}
+
+.NewsContainer{
+  padding: 0 5%;
+  margin: 1% 0px 0px 1.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.NewsComp {
+  background: rgba(255, 255, 255, 0.90);
+  padding: 1% 3%;
+  
+  border-radius: 5px;
+  width: 47%;
+  box-shadow: 0 15px 30px 1px gray;
+  text-align: center;
+  
+  margin: 2.5em auto;
+}
+
+.news-details {
+  position: relative;
+text-align: left;
+overflow: hidden;
+padding: 0 30px;
+float: left;
+width: 30%;
+}
+
+
+
+.product-image {
+  height: 350px;
+  width: 350px;
+  float: right;
+}
+
+.btn {
+  top: 20%;
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-image img{
+  height: 100%;
+  width: 100%;
+
 }
 
 code {
