@@ -1,11 +1,15 @@
 import {useState, useEffect} from 'react'
 import News from "./components/News";
 import Header from './components/Header'
+import SideContainer from './components/SideContainer'
+
 function App() {
 
   const [newsData, setNewsData] = useState([])
   const [Loading, setLoading] = useState(false)
   const [searchQuery, setSearchQuery] = useState('google')
+
+  const popularQueries = ['Google', 'Tesla', 'China', 'Apple', 'India','United States', 'Germany']
 
   useEffect(()=> {
 
@@ -26,8 +30,12 @@ function App() {
   return (
     <div className="App">
       <Header setSearchQuery={setSearchQuery}/>
+      <div className="page-body">
+      {!Loading ? <SideContainer searchQuery = {searchQuery} setSearchQuery = {setSearchQuery} popular = {popularQueries}/> : ""}
       
       {!Loading ? <News data = {newsData} query={searchQuery}/>: <h1>Loading</h1>}
+      </div>
+      
     </div>
   );
 }
