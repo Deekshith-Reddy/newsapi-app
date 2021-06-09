@@ -23,7 +23,7 @@ function App() {
     }
 
     fetchData()
-    console.log(newsData);
+    //console.log(newsData);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery])
 
