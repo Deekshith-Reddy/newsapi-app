@@ -7,7 +7,7 @@ const Header = ({setSearchQuery}) => {
 
     return (
         <div className="Header">
-            <h2>News App</h2>
+            <h2>NewsApi</h2>
             <div className="search">
                 <input type="text" onChange={(e) => setSearchTerm(e.target.value)}/>
                 <button onClick={(e)=> {setSearchQuery(searchTerm)}}>Search</button>
