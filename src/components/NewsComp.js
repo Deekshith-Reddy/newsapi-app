@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewsComp = ({object, query}) => {
 
-    var id = object.source.id;
+    var id = object.author;
     id = id === null ? query : id
     return (
         <div className="NewsComp">
@@ -17,7 +17,7 @@ const NewsComp = ({object, query}) => {
             
 
             <div className="product-image">
-                <img src={object.urlToImage} alt={query} className="src" />
+                <img src={object.image} alt={query} className="src" />
             </div>
             
         </div>

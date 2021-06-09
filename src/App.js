@@ -15,15 +15,15 @@ function App() {
 
     const fetchData = async () => {
       setLoading(true)
-      const res = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=c61e4e9566a248f5971e6b5511a5d51f`)
-      const {articles} = await res.json()
+      const res = await fetch(`https://api.currentsapi.services/v1/search?keywords=${searchQuery}&language=en&apiKey=JGVX1_3HUNNqK1NUbxqcp0thpYm_CtJnUeqtsDTyYMUf7nah`)
+      const {news} = await res.json()
       //dconsole.log(articles)
-      setNewsData(articles)
+      setNewsData(news)
       setLoading(false)
     }
 
     fetchData()
-    //console.log(newsData);
+    console.log(newsData);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery])
 
